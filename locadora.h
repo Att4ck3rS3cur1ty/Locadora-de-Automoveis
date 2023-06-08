@@ -98,6 +98,10 @@ class Seguro{
         std::string descricao;
         float preco;
     public:
+        Seguro();
+        Seguro(int id, std::string nome_seguro,
+        std::string descricao, float preco);
+
         int getId();
         int setId(int i);
 
@@ -120,7 +124,31 @@ class Manutencao{
 };
 
 class Promocao{
+    private:
+        int id;
+        std::string nome_promocao;
+        std::string descricao_promocao;
+        std::string data_inicio;
+        std::string data_termino;
+    public:
+        Promocao();
+        Promocao(int id, std::string nome_promocao, std::string descricao_promocao,
+        std::string data_inicio, std::string data_termino);
 
+        int getId();
+        int setId(int i);
+
+        std::string getNomePromocao();
+        std::string setNomePromocao(std::string n);
+
+        std::string getDescricaoPromocao();
+        std::string setDescricaoPromocao(std::string d);
+
+        std::string getDataInicio();
+        std::string setDataInicio(std::string d);
+
+        std::string getDataTermino();
+        std::string getDataTermino(std::string d);
 };
 
 class HistoricoAlguel : Cliente{
