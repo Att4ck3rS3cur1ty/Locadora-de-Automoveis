@@ -9,6 +9,7 @@ class Pessoa{
         std::string numero_telefone;
     public:
         Pessoa(std::string data_nasc, std::string nome);
+        ~Pessoa();
 
         std::string getDataNascimento();
         std::string setDataNascimento(std::string d);
@@ -45,6 +46,7 @@ class Veiculo{
         Veiculo(int id, std::string modelo, std::string marca, 
         int ano, std::string placa, std::string cor, float quilometragem,
         int capacidade_passageiros, std::string tipo_combustivel);
+        ~Veiculo();
 
         int getId();
         int setId(int i);
@@ -85,6 +87,7 @@ class Reserva{
         float valor_total;
     public:
         Reserva(Veiculo veiculo_obj, Cliente client_obj);
+        ~Reserva();
 
         int getId();
         int setId(int i);
@@ -125,6 +128,7 @@ class Seguro{
         Seguro();
         Seguro(int id, std::string nome_seguro,
         std::string descricao, float preco);
+        ~Seguro();
 
         int getId();
         int setId(int i);
@@ -158,6 +162,7 @@ class Promocao{
         Promocao();
         Promocao(int id, std::string nome_promocao, std::string descricao_promocao,
         std::string data_inicio, std::string data_termino);
+        ~Promocao();
 
         int getId();
         int setId(int i);
