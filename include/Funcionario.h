@@ -10,10 +10,13 @@ private:
     float salario;
 
 public:
+    // Construtor
     Funcionario(const std::string& nome, const std::string& cpf, const std::string& endereco,
                 const std::string& telefone, const std::string& email, const std::string& cargo,
                 float salario);
-    
+    // Destrutor
+    ~Funcionario();
+
     // Getters e Setters
     std::string getCargo() const;
     void setCargo(const std::string& cargo);

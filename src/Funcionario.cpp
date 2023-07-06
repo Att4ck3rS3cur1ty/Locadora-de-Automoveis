@@ -5,6 +5,10 @@ Funcionario::Funcionario(const std::string& nome, const std::string& cpf, const 
                          float salario)
     : Pessoa(nome, cpf, endereco, telefone, email), cargo(cargo), salario(salario) {}
 
+Funcionario::~Funcionario(){
+
+}
+
 std::string Funcionario::getCargo() const {
     return cargo;
 }
