@@ -5,6 +5,10 @@ Veiculo::Veiculo(const std::string& placa, const std::string& modelo, const std:
     : placa(placa), modelo(modelo), marca(marca), ano(ano), cor(cor), quilometragem(quilometragem),
       disponivel(true) {}
 
+Veiculo::~Veiculo(){
+    
+}
+
 std::string Veiculo::getPlaca() const {
     return placa;
 }

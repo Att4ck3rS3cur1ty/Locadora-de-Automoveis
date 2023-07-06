@@ -16,6 +16,7 @@ private:
 public:
     Veiculo(const std::string& placa, const std::string& modelo, const std::string& marca,
             int ano, const std::string& cor, float quilometragem);
+    ~Veiculo();
     
     std::string getPlaca() const;
     std::string getModelo() const;
