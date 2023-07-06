@@ -13,7 +13,7 @@ private:
 public:
     Cliente(const std::string& nome, const std::string& cpf, const std::string& endereco,
             const std::string& telefone, const std::string& email, const std::string& profissao);
-    
+    ~Cliente();
     // Getters e Setters
     std::string getProfissao() const;
     void setProfissao(const std::string& profissao);
