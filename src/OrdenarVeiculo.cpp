@@ -12,11 +12,9 @@ void OrdenadorVeiculo::bubbleSort(std::vector<Veiculo>& vetor){
                 permutado = true;
             }
         }
-
+        // se nenhuma mudança for detectada no loop interno, encerra o loop
         if(!permutado){
             break;
-        }
-        
+        }   
     }
-    
 }
