@@ -12,9 +12,13 @@ private:
     std::string email;
 
 public:
+    // Construtor
     Pessoa(const std::string& nome, const std::string& cpf, const std::string& endereco,
            const std::string& telefone, const std::string& email);
     
+    // Destrutor
+    ~Pessoa();
+
     // Getters e Setters
     std::string getNome() const;
     void setNome(const std::string& nome);
