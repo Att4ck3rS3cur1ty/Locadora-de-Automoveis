@@ -3,6 +3,10 @@
 Locacao::Locacao(Veiculo* veiculo, Cliente* cliente)
     : veiculo(veiculo), cliente(cliente) {}
 
+Locacao::~Locacao(){
+
+}
+
 Veiculo* Locacao::getVeiculo() const {
     return veiculo;
 }

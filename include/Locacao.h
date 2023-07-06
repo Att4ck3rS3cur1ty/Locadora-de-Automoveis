@@ -12,7 +12,11 @@ private:
     // Outros atributos da locação
 
 public:
+    // Construtor
     Locacao(Veiculo* veiculo, Cliente* cliente);
+
+    // Destrutor
+    ~Locacao();
     
     // Getters e Setters
     Veiculo* getVeiculo() const;
