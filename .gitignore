@@ -3,6 +3,8 @@ build/
 bin/
 obj/
 vscode/
+bin/
+data/
 
 
 
