@@ -25,15 +25,19 @@ int Veiculo::getAno() const {
     return ano;
 }
 
+float Veiculo::getValorLocacao(){
+    return valor_locacao;
+}
+
 std::string Veiculo::getCor() const {
     return cor;
 }
 
-float Veiculo::getQuilometragem() const {
+float Veiculo::getQuilometragem() {
     return quilometragem;
 }
 
-bool Veiculo::isDisponivel() const {
+bool Veiculo::getDisponibilidade() {
     return disponivel;
 }
 
@@ -47,6 +51,10 @@ void Veiculo::setMarca(const std::string& marca) {
 
 void Veiculo::setAno(int ano) {
     this->ano = ano;
+}
+
+void Veiculo::setValorLocacao(int valor_locacao){
+    this->valor_locacao = valor_locacao;
 }
 
 void Veiculo::setCor(const std::string& cor) {

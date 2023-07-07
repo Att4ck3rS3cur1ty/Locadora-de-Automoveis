@@ -8,8 +8,9 @@ private:
     std::string placa;
     std::string modelo;
     std::string marca;
-    int ano;
     std::string cor;
+    int ano;
+    float valor_locacao;
     float quilometragem;
     bool disponivel;
 
@@ -21,14 +22,16 @@ public:
     std::string getPlaca() const;
     std::string getModelo() const;
     std::string getMarca() const;
-    int getAno() const;
     std::string getCor() const;
-    float getQuilometragem() const;
-    bool isDisponivel() const;
+    int getAno() const;
+    float getValorLocacao();
+    float getQuilometragem();
+    bool getDisponibilidade();
 
     void setModelo(const std::string& modelo);
     void setMarca(const std::string& marca);
     void setAno(int ano);
+    void setValorLocacao(int valor_locacao);
     void setCor(const std::string& cor);
     void setQuilometragem(float quilometragem);
     void setDisponivel(bool disponivel);
