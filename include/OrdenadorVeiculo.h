@@ -11,7 +11,9 @@
 class OrdenadorVeiculo {
 public:
     static void bubbleSort(std::vector<Veiculo>& vetor);
-    static void quickSort(std::vector<Veiculo>& vetor, int inicial, int final);
+    static void quickSort(std::vector<Veiculo>& vetor, int begin, int end);
+    static void mergeSort(std::vector<Veiculo>& vetor);
+    static void merge(std::vector<Veiculo>& vetor, std::vector<Veiculo>& left_half, std::vector<Veiculo>& right_half);
 };
 
 #endif
