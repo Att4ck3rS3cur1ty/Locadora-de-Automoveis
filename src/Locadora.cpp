@@ -6,7 +6,12 @@ void Locadora::adicionarFuncionario(Funcionario* funcionario) {
 }
 
 void Locadora::removerFuncionario(Funcionario* funcionario) {
-    // Remover funcionário da lista de funcionários
+    for (auto it = funcionarios.begin(); it != funcionarios.end(); ++it) {
+        if (*it == funcionario) {
+            funcionarios.erase(it);
+            break;
+        }
+    }
 }
 
 void Locadora::adicionarCliente(Cliente* cliente) {
@@ -14,7 +19,12 @@ void Locadora::adicionarCliente(Cliente* cliente) {
 }
 
 void Locadora::removerCliente(Cliente* cliente) {
-    // Remover cliente da lista de clientes
+    for (auto it = clientes.begin(); it != clientes.end(); ++it) {
+        if (*it == cliente) {
+            clientes.erase(it);
+            break;
+        }
+    }
 }
 
 void Locadora::adicionarVeiculo(Veiculo* veiculo) {
@@ -22,29 +32,48 @@ void Locadora::adicionarVeiculo(Veiculo* veiculo) {
 }
 
 void Locadora::removerVeiculo(Veiculo* veiculo) {
-    // Remover veículo da lista de veículos
+    for (auto it = veiculos.begin(); it != veiculos.end(); ++it) {
+        if (*it == veiculo) {
+            veiculos.erase(it);
+            break;
+        }
+    }
 }
 
 void Locadora::realizarLocacao(Veiculo* veiculo, Cliente* cliente) {
-    // Criar uma nova locação e adicionar à lista de locações
+    Locacao locacao(veiculo, cliente);
+    locacoes.push_back(locacao);
 }
 
 void Locadora::encerrarLocacao(Locacao* locacao) {
-    // Remover locação da lista de locações
+    for (auto it = locacoes.begin(); it != locacoes.end(); ++it) {
+        if (&(*it) == locacao) {
+            locacoes.erase(it);
+            break;
+        }
+    }
 }
 
 void Locadora::listarFuncionarios() {
-    // Listar funcionários
+    for (const auto& funcionario : funcionarios) {
+        std::cout << funcionario->getNome() << " - " << funcionario->getCargo() << std::endl;
+    }
 }
 
 void Locadora::listarClientes() {
-    // Listar clientes
+    for (const auto& cliente : clientes) {
+        std::cout << cliente->getNome() << " - " << cliente->getCpf() << std::endl;
+    }
 }
 
 void Locadora::listarVeiculos() {
-    // Listar veículos
+    for (const auto& veiculo : veiculos) {
+        std::cout << veiculo->getMarca() << " - " << veiculo->getModelo() << std::endl;
+    }
 }
 
 void Locadora::listarLocacoes() {
-    // Listar locações
+    for (const auto& locacao : locacoes) {
+        std::cout << locacao.getVeiculo()->getMarca() << " - " << locacao.getCliente()->getNome() << std::endl;
+    }
 }
