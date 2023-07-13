@@ -68,16 +68,16 @@ O projeto implementa os seguintes algoritmos de ordenação:
 
 ### Bubble Sort
 
-O Bubble Sort é um algoritmo de ordenação simples que percorre repetidamente a lista a ser ordenada, comparando elementos adjacentes e trocando-os se estiverem na ordem errada. Esse processo é repetido até que a lista esteja completamente ordenada. O Bubble Sort é eficiente para pequenas listas ou quando a lista já está parcialmente ordenada, mas pode ser menos eficiente para listas maiores.
+O Bubble Sort é um algoritmo de ordenação simples que percorre repetidamente a lista a ser ordenada, comparando elementos adjacentes e trocando-os se estiverem na ordem errada. Esse processo é repetido até que a lista esteja completamente ordenada. O Bubble Sort é eficiente para pequenas listas ou quando a lista já está parcialmente ordenada, mas pode ser menos eficiente para listas maiores. Em seu pior cenário, bem como em seu cenário mediano, o Bubble Sort tem uma complexidade O(n2), em que "n" são os itens a serem ordenados. Dessa forma, é considerado um algoritmo lento em comparação a outros existentes, por isso é raramente utilizado em termos práticos.
 
 ### Quick Sort
 
-O Quick Sort é um algoritmo de ordenação eficiente e amplamente utilizado. Ele seleciona um elemento como pivô e particiona a lista em duas partes, uma contendo elementos menores que o pivô e outra contendo elementos maiores. Em seguida, o processo é repetido recursivamente nas duas partes até que toda a lista esteja ordenada. O Quick Sort é eficiente para listas grandes e possui um desempenho médio rápido.
+O Quick Sort é um algoritmo de ordenação eficiente e amplamente utilizado. Ele seleciona um elemento como pivô e particiona a lista em duas partes, uma contendo elementos menores que o pivô e outra contendo elementos maiores. Em seguida, o processo é repetido recursivamente nas duas partes até que toda a lista esteja ordenada. O Quick Sort é eficiente para listas grandes e possui um desempenho médio rápido, haja vista sua complexidade O(n*log n), em que "n" são os itens a serem ordenados, considerando seu cenário mediano, e O(n2) para seu pior cenário.
 
 
 ### Merge Sort
 
-O Merge Sort é um algoritmo de ordenação altamente eficiente e veloz. Tomando um conjunto de n elementos ordenáveis, este algoritmo irá dividi-lo pela metade (n/2) e efetuar sucessivas divisões, também pela metade, desse agrupamento até que esse conjunto se transforme em um conjunto unitário (n/n). A partir daí, o algoritmo passa a reagrupar os elementos (merge) em pares até retornarem ao conjunto original n, mas dessa vez completamente ordenado.
+O Merge Sort é um algoritmo de ordenação altamente eficiente e veloz. Tomando um conjunto de n elementos ordenáveis, este algoritmo irá dividi-lo pela metade (n/2) e efetuar sucessivas divisões, também pela metade, desse agrupamento até que esse conjunto se transforme em um conjunto unitário (n/n). A partir daí, o algoritmo passa a reagrupar os elementos (merge) em pares até retornarem ao conjunto original n, mas dessa vez completamente ordenado. Tratando de complexidade, este algoritmo possui a peculiaridade de ser O(n log n), em que "n" são os itens a serem ordenados, nos três casos possíveis: pior, mediano e melhor. 
 ## Abaixo segue o diagrama de classes do projeto:
 
 
