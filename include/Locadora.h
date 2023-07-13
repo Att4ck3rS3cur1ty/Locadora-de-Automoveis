@@ -40,8 +40,8 @@ public:
     void listarVeiculos();
     void listarLocacoes();
     void limparDados();
-    void salvarDados(const std::string& nomeArquivo);
-    void carregarDados(const std::string& nomeArquivo);
+    void salvarDados(const std::string& caminhoArquivo);
+    void carregarDados(const std::string& caminhoArquivo);
 };
 
 #endif
