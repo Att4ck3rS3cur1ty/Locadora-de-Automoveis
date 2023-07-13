@@ -1,5 +1,7 @@
 #include "Locadora.h"
 #include <iostream>
+#include <fstream>
+#include <string>
 
 Locadora::Locadora(std::vector<Funcionario*> funcionarios, std::vector<Cliente*> clientes,
     std::vector<Veiculo*> veiculos, std::vector<Locacao*> locacoes, HistoricoLocacoes historicoLocacoes,
@@ -106,4 +108,24 @@ void Locadora::adicionarReserva(int idReserva) {
 
 int Locadora::obterProximaReserva() {
     return filaReservas.dequeue();
+}
+
+void Locadora::carregarDados(const std::string& caminho_arquivo) {
+    std::ifstream arquivo_stream(caminho_arquivo);
+
+    arquivo_stream.open(caminho_arquivo);
+
+     if(arquivo_stream.fail()){
+        std::cerr << "Erro ao abrir o arquivo " << caminho_arquivo << std::endl;
+        return;
+    }
+
+    while (arquivo_stream.peek()!=EOF)
+    {
+        std::string dados;
+        getline(arquivo_stream, dados, ',');
+        std::cout << dados << std::endl;
+    }
+
+    arquivo_stream.close();
 }
