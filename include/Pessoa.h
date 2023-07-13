@@ -15,6 +15,8 @@ public:
     // Construtor
     Pessoa(const std::string& nome, const std::string& cpf, const std::string& endereco,
            const std::string& telefone, const std::string& email);
+
+    Pessoa();
     
     // Destrutor
     ~Pessoa();

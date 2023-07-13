@@ -4,6 +4,10 @@ Pessoa::Pessoa(const std::string& nome, const std::string& cpf, const std::strin
                const std::string& telefone, const std::string& email)
     : nome(nome), cpf(cpf), endereco(endereco), telefone(telefone), email(email) {}
 
+Pessoa::Pessoa(){
+
+}
+
 Pessoa::~Pessoa(){
 
 }
@@ -16,7 +20,7 @@ void Pessoa::setNome(const std::string& nome) {
     this->nome = nome;
 }
 
-std::string Pessoa::getCPF() const {
+std::string Pessoa::getCpf() const {
     return cpf;
 }
 

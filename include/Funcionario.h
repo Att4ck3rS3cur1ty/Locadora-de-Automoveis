@@ -14,6 +14,7 @@ public:
     Funcionario(const std::string& nome, const std::string& cpf, const std::string& endereco,
                 const std::string& telefone, const std::string& email, const std::string& cargo,
                 float salario);
+    Funcionario();
     // Destrutor
     ~Funcionario();
 
