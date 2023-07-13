@@ -6,6 +6,7 @@
 #include "Veiculo.h"
 #include "Locacao.h"
 #include "HistoricoLocacoes.h"
+#include "Fila.h"
 #include <vector>
 
 class Locadora {
@@ -15,7 +16,7 @@ private:
     std::vector<Veiculo*> veiculos;
     std::vector<Locacao*> locacoes;
     HistoricoLocacoes historicoLocacoes;
-    // std::stack<Locacao> historicoLocacoes; // Pilha de locações
+    Fila filaReservas;
     // std::queue<Locacao> filaEspera; // Fila de espera de locações
 
 
@@ -26,11 +27,9 @@ public:
     void removerCliente(Cliente* cliente);
     void adicionarVeiculo(Veiculo* veiculo);
     void removerVeiculo(Veiculo* veiculo);
-    // void adicionarLocacao(const Locacao& locacao){historicoLocacoes.push(locacao);}
-    // void removerUltimaLocacao(){historicoLocacoes.pop();}
     Locacao obterProximaLocacao();
-    // void adicionarLocacaoNaFila(const Locacao& locacao){filaEspera.push(locacao);}
-    // void removerProximaLocacaoDaFila(){filaEspera.pop();}
+    void adicionarReserva(int idReserva);
+    int obterProximaReserva();
     void realizarLocacao(Veiculo* veiculo, Cliente* cliente);
     void encerrarLocacao(Locacao* locacao);
     void listarFuncionarios();

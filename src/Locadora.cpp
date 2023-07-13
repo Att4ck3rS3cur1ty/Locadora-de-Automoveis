@@ -48,3 +48,11 @@ void Locadora::listarVeiculos() {
 void Locadora::listarLocacoes() {
     // Listar locações
 }
+
+void Locadora::adicionarReserva(int idReserva) {
+    filaReservas.enqueue(idReserva);
+}
+
+int Locadora::obterProximaReserva() {
+    return filaReservas.dequeue();
+}
