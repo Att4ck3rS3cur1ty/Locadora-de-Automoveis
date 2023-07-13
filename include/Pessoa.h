@@ -22,7 +22,7 @@ public:
     // Getters e Setters
     std::string getNome() const;
     void setNome(const std::string& nome);
-    std::string getCPF() const;
+    std::string getCpf() const;
     void setCPF(const std::string& cpf);
     std::string getEndereco() const;
     void setEndereco(const std::string& endereco);
