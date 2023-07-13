@@ -30,7 +30,7 @@ void Locadora::realizarLocacao(Veiculo* veiculo, Cliente* cliente) {
 }
 
 void Locadora::encerrarLocacao(Locacao* locacao) {
-    // Remover locação da lista de locações
+    historicoLocacoes.adicionarLocacao(locacao->getId());
 }
 
 void Locadora::listarFuncionarios() {

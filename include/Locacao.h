@@ -9,6 +9,7 @@ class Locacao {
 private:
     Veiculo* veiculo;
     Cliente* cliente;
+    int id;
     // Outros atributos da locação
 
 public:
@@ -23,6 +24,7 @@ public:
     void setVeiculo(Veiculo* veiculo);
     Cliente* getCliente() const;
     void setCliente(Cliente* cliente);
+    int getId();
     // Outros métodos da locação
 };
 
