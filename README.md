@@ -13,7 +13,7 @@ O sistema oferece as seguintes funcionalidades:
 - Atualização da quilometragem dos veículos.
 - Listagem de todas as locações ativas.
 - Utilização de estruturas de dados como pilha e fila.
-- Implementação dos algoritmos de ordenação Bubble Sort e Quick Sort.
+- Implementação dos algoritmos de ordenação Bubble Sort, Quick Sort e Merge Sort.
 
 
 ## Estrutura do projeto
