@@ -73,6 +73,11 @@ O Bubble Sort é um algoritmo de ordenação simples que percorre repetidamente 
 ### Quick Sort
 
 O Quick Sort é um algoritmo de ordenação eficiente e amplamente utilizado. Ele seleciona um elemento como pivô e particiona a lista em duas partes, uma contendo elementos menores que o pivô e outra contendo elementos maiores. Em seguida, o processo é repetido recursivamente nas duas partes até que toda a lista esteja ordenada. O Quick Sort é eficiente para listas grandes e possui um desempenho médio rápido.
+
+
+### Merge Sort
+
+O Merge Sort é um algoritmo de ordenação altamente eficiente e veloz. Tomando um conjunto de n elementos ordenáveis, este algoritmo irá dividi-lo pela metade (n/2) e efetuar sucessivas divisões, também pela metade, desse agrupamento até que esse conjunto se transforme em um conjunto unitário (n/n). A partir daí, o algoritmo passa a reagrupar os elementos (merge) em pares até retornarem ao conjunto original n, mas dessa vez completamente ordenado.
 ## Abaixo segue o diagrama de classes do projeto:
 
 
