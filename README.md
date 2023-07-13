@@ -22,24 +22,44 @@ O projeto é modularizado com a seguinte estrutura:
 
 ```
 projeto
+├── bin
+├── build
+├── data
+│   ├── dados.txt
+├── docs
+│   ├── Doxyfile
+├── images
 ├── include
-│   ├── Pessoa.h
+│   ├── Cliente.h 
 │   ├── Funcionario.h
-│   ├── Cliente.h
-│   ├── Veiculo.h
-│   ├── OrdenaVeiculo.h
+│   ├── HistoricoLocacoes.h
 │   ├── Locacao.h
+│   ├── Locadora.h
+│   ├── OrdenaVeiculo.h
+│   ├── Pessoa.h
+│   ├── Pilha.h
+│   ├── Veiculo.h
 │   └── Locadora.h
 └── src
-    ├── Pessoa.cpp
-    ├── Funcionario.cpp
-    ├── Cliente.cpp
-    ├── Veiculo.cpp
-    ├── Locacao.cpp
-    ├── Locadora.cpp
-    └── main.cpp
+│   ├── Cliente.cpp 
+│   ├── Funcionario.cpp
+│   ├── HistoricoLocacoes.cpp
+│   ├── Locacao.cpp
+│   ├── Locadora.cpp
+│   ├── main.cpp
+│   ├── OrdenaVeiculo.cpp
+│   ├── Pessoa.cpp
+│   ├── Pilha.cpp
+│   ├── Veiculo.cpp
+│   └── Locadora.cpp
+
 ```
 
+- O diretório `bin` contém o arquivo executável `locadora`.
+- O diretório `build` contém os arquivos objeto (`.o`) gerados durante a compilação.
+- O diretório `data` contém o arquivo `dados.txt` que armazena os dados de clientes, funcionários e veículos.
+- O diretório `docs` contém o arquivo `Doxyfile` que é utilizado para gerar a documentação do projeto.
+- O diretório `images` contém as imagens utilizadas na documentação do projeto.
 - O diretório `include` contém os arquivos de cabeçalho (`.h`) de todas as classes.
 - O diretório `src` contém os arquivos de implementação (`.cpp`) de todas as classes, incluindo o arquivo `main.cpp` que contém a função `main`.
 - O arquivo `Locadora.cpp` contém a implementação das funções e métodos principais do sistema.
