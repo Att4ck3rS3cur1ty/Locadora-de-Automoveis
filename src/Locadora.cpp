@@ -30,7 +30,7 @@ void Locadora::realizarLocacao(Veiculo* veiculo, Cliente* cliente) {
 }
 
 void Locadora::encerrarLocacao(Locacao* locacao) {
-    // Remover locação da lista de locações
+    historicoLocacoes.adicionarLocacao(locacao->getId());
 }
 
 void Locadora::listarFuncionarios() {
@@ -47,4 +47,12 @@ void Locadora::listarVeiculos() {
 
 void Locadora::listarLocacoes() {
     // Listar locações
+}
+
+void Locadora::adicionarReserva(int idReserva) {
+    filaReservas.enqueue(idReserva);
+}
+
+int Locadora::obterProximaReserva() {
+    return filaReservas.dequeue();
 }
