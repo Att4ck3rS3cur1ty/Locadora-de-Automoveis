@@ -7,3 +7,7 @@ void HistoricoLocacoes::adicionarLocacao(int idLocacao) {
 int HistoricoLocacoes::obterUltimaLocacao() {
     return pilhaHistorico.pop();
 }
+
+void HistoricoLocacoes::limparHistorico() {
+    historico.clear();
+}
