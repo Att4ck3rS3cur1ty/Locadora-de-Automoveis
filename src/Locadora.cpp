@@ -1,6 +1,13 @@
 #include "Locadora.h"
 #include <iostream>
 
+Locadora::Locadora(std::vector<Funcionario*> funcionarios, std::vector<Cliente*> clientes,
+    std::vector<Veiculo*> veiculos, std::vector<Locacao*> locacoes, HistoricoLocacoes historicoLocacoes,
+    Fila<int> filaReservas)
+    : funcionarios(funcionarios), clientes(clientes), veiculos(veiculos), locacoes(locacoes),
+    historicoLocacoes(historicoLocacoes), filaReservas(filaReservas) {}
+    
+
 void Locadora::adicionarFuncionario(Funcionario* funcionario) {
     funcionarios.push_back(funcionario);
 }
