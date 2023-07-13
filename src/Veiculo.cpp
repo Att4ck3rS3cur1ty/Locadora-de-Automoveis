@@ -41,6 +41,10 @@ bool Veiculo::getDisponibilidade() {
     return disponivel;
 }
 
+void Veiculo::setPlaca(const std::string& placa) {
+    this->placa = placa;
+}
+
 void Veiculo::setModelo(const std::string& modelo) {
     this->modelo = modelo;
 }

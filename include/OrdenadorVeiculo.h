@@ -6,7 +6,7 @@
 #include <vector>
 #include "Veiculo.h"
 
-// Algoritimos de ordenação que serão utilizados para ordenar os veículos
+// Algoritmos de ordenação que serão utilizados para ordenar os veículos
 
 class OrdenadorVeiculo {
 public:

@@ -28,6 +28,7 @@ public:
     float getQuilometragem();
     bool getDisponibilidade();
 
+    void setPlaca(const std::string& placa);
     void setModelo(const std::string& modelo);
     void setMarca(const std::string& marca);
     void setAno(int ano);
