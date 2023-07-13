@@ -16,7 +16,7 @@ private:
     std::vector<Veiculo*> veiculos;
     std::vector<Locacao*> locacoes;
     HistoricoLocacoes historicoLocacoes;
-    Fila filaReservas;
+    Fila<int> filaReservas;
     // std::queue<Locacao> filaEspera; // Fila de espera de locações
 
 
@@ -36,6 +36,9 @@ public:
     void listarClientes();
     void listarVeiculos();
     void listarLocacoes();
+    void limparDados();
+    void salvarDados(const std::string& nomeArquivo);
+    void carregarDados(const std::string& nomeArquivo);
 };
 
 #endif

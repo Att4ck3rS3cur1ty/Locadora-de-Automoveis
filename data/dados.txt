@@ -1,0 +1,15 @@
+Funcionarios:
+Nome: Joao, CPF: 11111111111
+Nome: Maria, CPF: 22222222222
+
+Clientes:
+Nome: Pedro, CPF: 33333333333
+Nome: Ana, CPF: 44444444444
+
+Veiculos:
+Placa: ABC123, Modelo: Sedan
+Placa: DEF456, Modelo: SUV
+
+Locacoes:
+ID: 1, Veiculo: ABC123, Cliente: 33333333333
+ID: 2, Veiculo: DEF456, Cliente: 44444444444
