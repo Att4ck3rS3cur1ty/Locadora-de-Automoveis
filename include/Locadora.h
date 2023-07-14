@@ -23,6 +23,7 @@ private:
 public:
     Locadora(std::vector<Funcionario*> funcionarios, std::vector<Cliente*> clientes,
     std::vector<Veiculo*> veiculos);
+    Locadora();
     void adicionarFuncionario(Funcionario* funcionario);
     void removerFuncionario(Funcionario* funcionario);
     void adicionarCliente(Cliente* cliente);

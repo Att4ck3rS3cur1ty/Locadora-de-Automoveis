@@ -13,6 +13,7 @@ Locadora::Locadora(std::vector<Funcionario*> funcionarios, std::vector<Cliente*>
     : funcionarios(funcionarios), clientes(clientes), veiculos(veiculos), locacoes(locacoes),
     historicoLocacoes(historicoLocacoes), filaReservas(filaReservas) {}
     
+Locadora::Locadora(){}
 
 void Locadora::adicionarFuncionario(Funcionario* funcionario) {
     funcionarios.push_back(funcionario);

@@ -23,8 +23,6 @@ public:
     void setCargo(const std::string& cargo);
     float getSalario() const;
     void setSalario(float salario);
-    void salvarDados(const std::string& caminho_arquivo);
-    void carregarDados(const std::string& caminho_arquivo);
 };
 
 #endif
