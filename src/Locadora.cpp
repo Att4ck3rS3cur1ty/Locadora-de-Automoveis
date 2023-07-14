@@ -276,50 +276,6 @@ void Locadora::salvarDados(const std::string& caminho_arquivo){
         }
         
         stop_reading = false;
-
-        while (!stop_reading)
-        {        
-            std::cout << "========= Veículo =========" << std::endl;
-            std::cout << "Placa: " << std::endl;
-            std::cin >> str_aux;
-            veiculo->setPlaca(str_aux);
-            arquivo_stream << veiculo->getPlaca() << ",";
-
-            std::cout << "Modelo: " << std::endl;
-            std::cin >> str_aux;
-            veiculo->setModelo(str_aux);
-            arquivo_stream << veiculo->getModelo() << ",";
-
-            std::cout << "Marca: " << std::endl;
-            std::cin >> str_aux;
-            veiculo->setMarca(str_aux);
-            arquivo_stream << veiculo->getMarca() << ",";
-
-            std::cout << "Ano: " << std::endl;
-            std::cin >> int_aux;
-            veiculo->setAno(int_aux);
-            arquivo_stream << veiculo->getAno() << ",";
-
-            std::cout << "Cor: " << std::endl;
-            std::cin >> str_aux;
-            veiculo->setCor(str_aux);
-            arquivo_stream << veiculo->getCor() << ",";  
-
-            std::cout << "Quilometragem: " << std::endl;
-            std::cin >> flt_aux;
-            veiculo->setQuilometragem(flt_aux);
-            arquivo_stream << veiculo->getQuilometragem() << ",";
-
-            std::cout << "Deseja adicionar mais um veículo? S ou N" << std::endl;
-            std::cin >> chr_aux;
-
-            if (chr_aux == 'N' || chr_aux == 'n')
-            {
-                stop_reading = true;
-            }
-        }
-        
-        stop_reading = false;
     }
 }
 
