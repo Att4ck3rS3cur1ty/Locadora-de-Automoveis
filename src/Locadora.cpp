@@ -2,10 +2,14 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "Funcionario.h"
+#include "Cliente.h"
+#include "Veiculo.h"
+#include "Locacao.h"
+#include "Fila.h"
 
 Locadora::Locadora(std::vector<Funcionario*> funcionarios, std::vector<Cliente*> clientes,
-    std::vector<Veiculo*> veiculos, std::vector<Locacao*> locacoes, HistoricoLocacoes historicoLocacoes,
-    Fila<int> filaReservas)
+    std::vector<Veiculo*> veiculos)
     : funcionarios(funcionarios), clientes(clientes), veiculos(veiculos), locacoes(locacoes),
     historicoLocacoes(historicoLocacoes), filaReservas(filaReservas) {}
     
@@ -108,6 +112,214 @@ void Locadora::adicionarReserva(int idReserva) {
 
 int Locadora::obterProximaReserva() {
     return filaReservas.dequeue();
+}
+
+void Locadora::salvarDados(const std::string& caminho_arquivo){
+    std::ofstream arquivo_stream(caminho_arquivo);
+    bool stop_all = false;
+
+    arquivo_stream.open(caminho_arquivo);
+
+     if(arquivo_stream.fail()){
+        std::cerr << "Erro ao abrir o arquivo " << caminho_arquivo << std::endl;
+        return;
+    }
+
+    std::cout << "Inserindo dados..." << std::endl;
+    Funcionario* funcionario;
+    Cliente* cliente;
+    Veiculo* veiculo;
+
+    std::string str_aux;
+    float flt_aux;
+    char chr_aux;
+    int int_aux;
+
+    bool stop_reading;
+
+    while (!stop_all)
+    {
+        while (!stop_reading)
+        {        
+            std::cout << "========= Funcionário =========" << std::endl;
+            std::cout << "Nome: " << std::endl;
+            std::cin >> str_aux;
+            funcionario->setNome(str_aux);
+            arquivo_stream << funcionario->getNome() << ",";
+
+            std::cout << "CPF: " << std::endl;
+            std::cin >> str_aux;
+            funcionario->setCPF(str_aux);
+            arquivo_stream << funcionario->getCpf() << ",";
+
+            std::cout << "Endereço: " << std::endl;
+            std::cin >> str_aux;
+            funcionario->setEndereco(str_aux);
+            arquivo_stream << funcionario->getEndereco() << ",";
+
+            std::cout << "Telefone: " << std::endl;
+            std::cin >> str_aux;
+            funcionario->setTelefone(str_aux);
+            arquivo_stream << funcionario->getTelefone() << ",";
+
+            std::cout << "Email: " << std::endl;
+            std::cin >> str_aux;
+            funcionario->setEmail(str_aux);
+            arquivo_stream << funcionario->getEmail() << ",";  
+
+            std::cout << "Cargo: " << std::endl;
+            std::cin >> str_aux;
+            funcionario->setCargo(str_aux);
+            arquivo_stream << funcionario->getCargo() << ",";
+
+            std::cout << "Salario: " << std::endl;
+            std::cin >> flt_aux;
+            funcionario->setSalario(flt_aux);
+            arquivo_stream << funcionario->getSalario();
+
+            std::cout << "Deseja adicionar mais um funcionário? S ou N" << std::endl;
+            std::cin >> chr_aux;
+
+            if (chr_aux == 'N' || chr_aux == 'n')
+            {
+                stop_reading = true;
+            }
+        }
+
+        stop_reading = false;
+
+        while (!stop_reading)
+        {        
+            std::cout << "========= Cliente =========" << std::endl;
+            std::cout << "Nome: " << std::endl;
+            std::cin >> str_aux;
+            cliente->setNome(str_aux);
+            arquivo_stream << cliente->getNome() << ",";
+
+            std::cout << "CPF: " << std::endl;
+            std::cin >> str_aux;
+            cliente->setCPF(str_aux);
+            arquivo_stream << cliente->getCpf() << ",";
+
+            std::cout << "Endereço: " << std::endl;
+            std::cin >> str_aux;
+            cliente->setEndereco(str_aux);
+            arquivo_stream << cliente->getEndereco() << ",";
+
+            std::cout << "Telefone: " << std::endl;
+            std::cin >> str_aux;
+            cliente->setTelefone(str_aux);
+            arquivo_stream << cliente->getTelefone() << ",";
+
+            std::cout << "Email: " << std::endl;
+            std::cin >> str_aux;
+            cliente->setEmail(str_aux);
+            arquivo_stream << cliente->getEmail() << ",";  
+
+            std::cout << "Profissão: " << std::endl;
+            std::cin >> str_aux;
+            cliente->setProfissao(str_aux);
+            arquivo_stream << cliente->getProfissao() << ",";
+
+            std::cout << "Deseja adicionar mais um cliente? S ou N" << std::endl;
+            std::cin >> chr_aux;
+
+            if (chr_aux == 'N' || chr_aux == 'n')
+            {
+                stop_reading = true;
+            }
+        }
+        
+        stop_reading = false;
+
+        while (!stop_reading)
+        {        
+            std::cout << "========= Veículo =========" << std::endl;
+            std::cout << "Placa: " << std::endl;
+            std::cin >> str_aux;
+            veiculo->setPlaca(str_aux);
+            arquivo_stream << veiculo->getPlaca() << ",";
+
+            std::cout << "Modelo: " << std::endl;
+            std::cin >> str_aux;
+            veiculo->setModelo(str_aux);
+            arquivo_stream << veiculo->getModelo() << ",";
+
+            std::cout << "Marca: " << std::endl;
+            std::cin >> str_aux;
+            veiculo->setMarca(str_aux);
+            arquivo_stream << veiculo->getMarca() << ",";
+
+            std::cout << "Ano: " << std::endl;
+            std::cin >> int_aux;
+            veiculo->setAno(int_aux);
+            arquivo_stream << veiculo->getAno() << ",";
+
+            std::cout << "Cor: " << std::endl;
+            std::cin >> str_aux;
+            veiculo->setCor(str_aux);
+            arquivo_stream << veiculo->getCor() << ",";  
+
+            std::cout << "Quilometragem: " << std::endl;
+            std::cin >> flt_aux;
+            veiculo->setQuilometragem(flt_aux);
+            arquivo_stream << veiculo->getQuilometragem() << ",";
+
+            std::cout << "Deseja adicionar mais um veículo? S ou N" << std::endl;
+            std::cin >> chr_aux;
+
+            if (chr_aux == 'N' || chr_aux == 'n')
+            {
+                stop_reading = true;
+            }
+        }
+        
+        stop_reading = false;
+
+        while (!stop_reading)
+        {        
+            std::cout << "========= Veículo =========" << std::endl;
+            std::cout << "Placa: " << std::endl;
+            std::cin >> str_aux;
+            veiculo->setPlaca(str_aux);
+            arquivo_stream << veiculo->getPlaca() << ",";
+
+            std::cout << "Modelo: " << std::endl;
+            std::cin >> str_aux;
+            veiculo->setModelo(str_aux);
+            arquivo_stream << veiculo->getModelo() << ",";
+
+            std::cout << "Marca: " << std::endl;
+            std::cin >> str_aux;
+            veiculo->setMarca(str_aux);
+            arquivo_stream << veiculo->getMarca() << ",";
+
+            std::cout << "Ano: " << std::endl;
+            std::cin >> int_aux;
+            veiculo->setAno(int_aux);
+            arquivo_stream << veiculo->getAno() << ",";
+
+            std::cout << "Cor: " << std::endl;
+            std::cin >> str_aux;
+            veiculo->setCor(str_aux);
+            arquivo_stream << veiculo->getCor() << ",";  
+
+            std::cout << "Quilometragem: " << std::endl;
+            std::cin >> flt_aux;
+            veiculo->setQuilometragem(flt_aux);
+            arquivo_stream << veiculo->getQuilometragem() << ",";
+
+            std::cout << "Deseja adicionar mais um veículo? S ou N" << std::endl;
+            std::cin >> chr_aux;
+
+            if (chr_aux == 'N' || chr_aux == 'n')
+            {
+                stop_reading = true;
+            }
+        }
+        
+        stop_reading = false;
+    }
 }
 
 void Locadora::carregarDados(const std::string& caminho_arquivo) {
